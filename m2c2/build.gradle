@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.zh'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //导包
+    // https://mvnrepository.com/artifact/us.codecraft/webmagic-core
+    compile group: 'us.codecraft', name: 'webmagic-core', version: '0.7.3'
+    // https://mvnrepository.com/artifact/us.codecraft/webmagic-extension
+    compile group: 'us.codecraft', name: 'webmagic-extension', version: '0.7.3'
+}
